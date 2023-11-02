@@ -20,4 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // /gghgh
 Route::namespace('App\Http\Controllers\Api')->group(function () {
     Route::get('/tests', 'TestController@index');
+    Route::post('/tests', 'TestController@store');
+    Route::delete('/tests', 'TestController@destroy');
 });
